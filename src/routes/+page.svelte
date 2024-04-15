@@ -50,7 +50,11 @@
 
 {#if nums.length > 0}
     {#each nums as rand_num, i}
-        <div><h1>{rand_num}</h1></div>
+        {#if (i%2) == 0}
+            <div><h1 class=" bg-slate-400">{rand_num}</h1></div>
+        {:else}
+            <div><p>{rand_num}</p></div>
+        {/if}
     {/each}
 {/if}
 
@@ -119,7 +123,7 @@
          font-weight: bolder;
     }
     
-    .nav {border-radius:0px 0px 10px 10px;}
+    .nav {border-radius:0px 0px 20px 20px;}
 
     :global(html) {
         background-color: rgb(19, 93, 102);
