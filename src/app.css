@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.darker-bg{background-color: rgb(0, 60, 67)}
+.mid-bg{background-color: rgb(19, 93, 102)}
+.light-bg{background-color: rgb(119, 176, 170)}
+.lighter-bg{background-color: rgb(227, 254, 247)}
+
+.darker{color: rgb(0, 60, 67)}
+.mid{color: rgb(19, 93, 102)}
+.light{color: rgb(119, 176, 170)}
+.lighter{color: rgb(227, 254, 247)}
+
+.title {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.nav {border-radius:0px 0px 20px 20px;}
