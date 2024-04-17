@@ -4,36 +4,26 @@
     export let index = 0;
 </script>
 
-{#if index % 2 == 0}
-    <div class="flex num-row darker-bg light">
-        <div  class="inner-comp">
-            <h1 class="text-center mx-7 w-7">{randnum}</h1>
-        </div>
 
-        <div  class="inner-comp">
-            <a class="underline mx-7" href="https://es.wikipedia.org/wiki/{randnum}">Info</a>
-        </div>
-
-        <div  class="inner-comp">
-            <p class="w-12 text-left mx-7">Par</p>
-        </div>
+<div class="flex num-row {index % 2 != 0 ? "light-bg darker":"darker-bg light"}">
+    <div  class="inner-comp">
+        <h1 class="text-center mx-7 w-7">{randnum}</h1>
     </div>
 
-{:else}
-    <div class="flex num-row light-bg darker">
-        <div  class="inner-comp">
-            <h1 class="text-center mx-7 w-7">{randnum}</h1>
-        </div>
-
-        <div  class="inner-comp">
-            <a class="underline mx-7" href="https://es.wikipedia.org/wiki/{randnum}">Info</a>
-        </div>
-
-        <div  class="inner-comp">
-            <p class="w-12 text-left mx-7">Impar</p>
-        </div>
+    <div  class="inner-comp">
+        <a class="underline mx-7" href="https://es.wikipedia.org/wiki/{randnum}">Info</a>
     </div>
-{/if}
+    <div  class="inner-comp">
+        <a class="underline mx-7" href="https://es.wikipedia.org/wiki/{randnum}">Info</a>
+    </div>
+    <div  class="inner-comp">
+        <a class="underline mx-7" href="https://es.wikipedia.org/wiki/{randnum}">Info</a>
+    </div>
+    <div  class="inner-comp">
+        <p class="w-12 text-left mx-7">{randnum % 2 == 0 ? "Par":"Impar"}</p>
+    </div>
+</div>
+
 
 <style>
     .num-row {
